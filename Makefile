@@ -6,7 +6,7 @@
 #    By: rmerien <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/26 22:11:23 by rmerien           #+#    #+#              #
-#    Updated: 2018/09/09 15:51:25 by rmerien          ###   ########.fr        #
+#    Updated: 2018/09/09 18:21:57 by rmerien          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,18 +79,21 @@ SRCS		=	$(LIBC_FT)				\
 
 OBJS	=	$(SRC:.c=.o)
 
-INC		=	-Iincludes
+#INC		=	-Iincludes
 
 CC      =	cc
 
-CFLAGS  +=	-Wall -Werror -Wextra
+CFLAGS  +=	-Wall -Werror -Wextra -Iincludes
 
 RM		=	rm -f
 
 all		:	$(NAME)
 
-$(NAME)	:
-	$(CC) 
+$(NAME)	:	$(OBJS)
+	$(CC) $(SRCS) -o $(NAME)
+
+$(OBJS)	:	$(SRCS)
+	$(CC) $(SRCS)
 
 clean	:
 	$(RM) $(OBJS)

@@ -6,7 +6,7 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/09 00:22:56 by rmerien           #+#    #+#             */
-/*   Updated: 2018/09/09 16:11:47 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/09/09 17:12:53 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		ft_atoi(const char *str)
 
 	if (!str)
 	{
-		ft_putstr("ERROR : string passed as argument is invalid !");
+		ft_putstr("ERROR ft_atoi : string passed as argument invalid.");
 		return (0);
 	}
 	res = 0;

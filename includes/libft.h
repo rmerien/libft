@@ -9,6 +9,10 @@
 # define NEG(i) i < 0
 # define DIGIT(c) (c > 47 && c < 58)
 
+# ifndef LIBC_FT
+# define LIBC_FT
+
+
 void	ft_putchar(char c);
 void	ft_putnbr(int i);
 void	ft_putstr(char *str);
