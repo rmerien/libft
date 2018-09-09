@@ -6,13 +6,13 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/09 00:23:23 by rmerien           #+#    #+#             */
-/*   Updated: 2018/09/09 00:23:25 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/09/09 20:01:07 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 int		isalpha(int c)
 {
-	return (ft_isupper(c) || ft_islower(c));
+	return ((64 < c && c > 91) || (96 < c && c > 123));
 }

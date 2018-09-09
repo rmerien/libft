@@ -6,7 +6,7 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/09 15:37:18 by rmerien           #+#    #+#             */
-/*   Updated: 2018/09/09 15:39:17 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/09/09 19:49:20 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	unsigned int i;
 	unsigned int j;
 
-	if (!needle || !haystack)
-		return ((char*)"ERROR : strings passed as arguments are invalid !");
 	if (!needle[0])
 		return ((char*)haystack);
 	i = 0;

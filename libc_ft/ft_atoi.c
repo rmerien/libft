@@ -6,7 +6,7 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/09 00:22:56 by rmerien           #+#    #+#             */
-/*   Updated: 2018/09/09 17:12:53 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/09/09 20:37:23 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,6 @@ int		ft_atoi(const char *str)
 	int					sign;
 	long				arch;
 
-	if (!str)
-	{
-		ft_putstr("ERROR ft_atoi : string passed as argument invalid.");
-		return (0);
-	}
 	res = 0;
 	arch = 2147483647;
 	while ((*str > 8 && *str < 14) || *str == 32)

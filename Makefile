@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rmerien <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/08/26 22:11:23 by rmerien           #+#    #+#              #
-#    Updated: 2018/09/09 18:21:57 by rmerien          ###   ########.fr        #
+#    Created: 2018/09/09 18:25:59 by rmerien           #+#    #+#              #
+#    Updated: 2018/09/09 19:25:53 by rmerien          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,28 +77,29 @@ SRCS		=	$(LIBC_FT)				\
 				$(SUPP_FT)				\
 				$(BONUS_FT)				
 
-OBJS	=	$(SRC:.c=.o)
+OBJS		=	$(SRC:.c=.o)
 
 #INC		=	-Iincludes
 
-CC      =	cc
+CC      	=	cc
 
-CFLAGS  +=	-Wall -Werror -Wextra -Iincludes
+CFLAGS  	+=	-Wall -Werror -Wextra -Iincludes
 
-RM		=	rm -f
+RM			=	rm -f
 
-all		:	$(NAME)
+all			:
+		@make $(NAME)
 
-$(NAME)	:	$(OBJS)
-	$(CC) $(SRCS) -o $(NAME)
+$(NAME)		:	$(OBJS)
+		$(CC) $(SRCS) -o $(NAME)
 
-$(OBJS)	:	$(SRCS)
-	$(CC) $(SRCS)
+$(OBJS)		:	$(SRCS)
+		$(CC) $(SRCS)
 
-clean	:
-	$(RM) $(OBJS)
+clean		:
+		$(RM) $(OBJS)
 
-fclean	:	clean
-	$(RM) $(NAME)
+fclean		:	clean
+		$(RM) $(NAME)
 
 re		:	fclean all
