@@ -6,7 +6,7 @@
 #    By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/09 18:25:59 by rmerien           #+#    #+#              #
-#    Updated: 2018/09/09 19:25:53 by rmerien          ###   ########.fr        #
+#    Updated: 2018/09/19 22:33:09 by rmerien          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,13 +77,13 @@ SRCS		=	$(LIBC_FT)				\
 				$(SUPP_FT)				\
 				$(BONUS_FT)				
 
-OBJS		=	$(SRC:.c=.o)
+OBJS		=	$(SRC:%.c=%.o)
 
-#INC		=	-Iincludes
+INC			=	-Iincludes
 
 CC      	=	cc
 
-CFLAGS  	+=	-Wall -Werror -Wextra -Iincludes
+CFLAGS  	+=	-c -Wall -Werror -Wextra -Iincludes
 
 RM			=	rm -f
 
@@ -91,15 +91,20 @@ all			:
 		@make $(NAME)
 
 $(NAME)		:	$(OBJS)
-		$(CC) $(SRCS) -o $(NAME)
+		$(CC) $(SRCS)
+		ar rc $(NAME) $(OBJS)
+		@echo "libft.a created √√"
 
 $(OBJS)		:	$(SRCS)
 		$(CC) $(SRCS)
+		@echo "OBJS created √√"
 
 clean		:
 		$(RM) $(OBJS)
+		@echo "OBJS cleared √√"
 
 fclean		:	clean
 		$(RM) $(NAME)
+		@echo "libft.a cleared √√"
 
 re		:	fclean all
