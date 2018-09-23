@@ -6,9 +6,11 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/09 15:37:18 by rmerien           #+#    #+#             */
-/*   Updated: 2018/09/09 19:49:20 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/09/23 22:28:08 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

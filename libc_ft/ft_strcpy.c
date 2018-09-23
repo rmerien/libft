@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/09 00:23:23 by rmerien           #+#    #+#             */
-/*   Updated: 2018/09/20 10:38:18 by rmerien          ###   ########.fr       */
+/*   Created: 2018/09/23 22:33:51 by rmerien           #+#    #+#             */
+/*   Updated: 2018/09/23 22:48:12 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_isalpha(int c)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	return ((64 < c && c > 91) || (96 < c && c > 123));
+	while (*src)
+		*dst++ = *src++;
+	*dst = *src;
+	return (dst);
 }

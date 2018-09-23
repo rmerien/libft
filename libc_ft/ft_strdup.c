@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/09 00:23:23 by rmerien           #+#    #+#             */
-/*   Updated: 2018/09/20 10:38:18 by rmerien          ###   ########.fr       */
+/*   Created: 2018/09/23 22:22:35 by rmerien           #+#    #+#             */
+/*   Updated: 2018/09/23 22:32:24 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalpha(int c)
+char	*ft_strdup(const char *s1)
 {
-	return ((64 < c && c > 91) || (96 < c && c > 123));
+	char	*s2;
+
+	s2 = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	while (*s1)
+		*s2++ = *s1++;
+	*s2 = *s1;
+	return (s2);
 }
