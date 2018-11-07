@@ -73,4 +73,8 @@ void		ft_lstadd(t_list **alst, t_list *new);
 void		ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
+int			ft_abs(int n);
+int			ft_pow(int a, int b);
+char	*ft_strndup(const char *s1, size_t n);
+
 #endif

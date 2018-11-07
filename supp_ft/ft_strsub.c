@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/23 22:22:35 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/07 11:29:02 by rmerien          ###   ########.fr       */
+/*   Created: 2018/11/06 00:16:19 by rmerien           #+#    #+#             */
+/*   Updated: 2018/11/07 12:31:39 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char	*s2;
+	char	*new_string;
+	int		i;
 
-	if (!(s2 = malloc(sizeof(char) * ft_strlen(s1) + 1)))
+	i = 0;
+	if (!s)
 		return (NULL);
-	ft_strcpy(s2, s1);
-	return (s2);
+	if (!(new_string = (char *)malloc(sizeof(char) * (len + 1))))
+		return (NULL);
+	new_string[len] = '\0';
+	while (len-- && s[start])
+		new_string[i++] = s[start++];
+	return (new_string);
 }

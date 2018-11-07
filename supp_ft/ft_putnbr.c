@@ -6,18 +6,18 @@
 /*   By: rmerien <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 19:46:41 by rmerien           #+#    #+#             */
-/*   Updated: 2018/09/08 20:51:22 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/07 14:50:26 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_putnbr(int i)
+void	ft_putnbr(int n)
 {
 	unsigned int nb;
 
 	nb = 0;
-	(NEG(i) ? (nb = -i), ft_putchar('-') : (nb = i));
+	(n < 0 ? (nb = -n), ft_putchar('-') : (nb = n));
 	if (nb > 9)
 		ft_putnbr(nb / 10);
 	ft_putchar((nb % 10) + 48);

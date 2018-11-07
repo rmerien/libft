@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmerien <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/20 10:03:01 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/07 11:16:23 by rmerien          ###   ########.fr       */
+/*   Created: 2018/10/07 04:31:31 by rmerien           #+#    #+#             */
+/*   Updated: 2018/11/07 12:34:18 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	const unsigned char *ts1;
-	const unsigned char *ts2;
-
-	ts1 = s1;
-	ts2 = s2;
-	while (n--)
+	if (!s1 || !s2)
+		return (0);
+	if (s1 && s2)
 	{
-		if (*ts1 != *ts2)
-			return (*ts1 - *ts2);
-		ts1++;
-		ts2++;
+		while (*s1 && *s1 == *s2++ && --n)
+			s1++;
 	}
-	return (0);
+	return (*s1 == *s2 ? 1 : 0);
 }

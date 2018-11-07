@@ -6,20 +6,19 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/09 00:24:10 by rmerien           #+#    #+#             */
-/*   Updated: 2018/09/09 01:07:50 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/07 11:19:54 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strcat(char *s1, const char *s2)
 {
-	int i;
-	int j;
+	unsigned int	i;
 
-	j = -1;
-	while (s1[++j]);
-	i = -1;
-	while (s2[++i])
-		s1[j + i] = s2[i];
-	s1[j + i] = s2[i];
+	i = 0;
+	while (s1[i])
+		i++;
+	ft_strcpy(&s1[i], s2);
 	return (s1);
 }

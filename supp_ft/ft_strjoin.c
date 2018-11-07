@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmerien <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/20 10:03:01 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/07 11:16:23 by rmerien          ###   ########.fr       */
+/*   Created: 2018/11/06 00:28:51 by rmerien           #+#    #+#             */
+/*   Updated: 2018/11/07 12:17:30 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	const unsigned char *ts1;
-	const unsigned char *ts2;
+	char	*new_string;
 
-	ts1 = s1;
-	ts2 = s2;
-	while (n--)
-	{
-		if (*ts1 != *ts2)
-			return (*ts1 - *ts2);
-		ts1++;
-		ts2++;
-	}
-	return (0);
+	if (!s1)
+		return (NULL);
+	if (!(new_string = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
+		return (NULL);
+	ft_strcpy(new_string, s1);
+	ft_strcat(new_string, s2);
+	return (new_string);
 }

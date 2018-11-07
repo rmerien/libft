@@ -1,16 +1,6 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/09/09 18:25:59 by rmerien           #+#    #+#              #
-#    Updated: 2018/09/23 23:41:21 by rmerien          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+CC = gcc
 
-NAME		=	libft.a
+NAME = libft.a
 
 LIBC_FT		=	libc_ft/ft_memset.c		\
 				libc_ft/ft_bzero.c		\
@@ -39,7 +29,7 @@ LIBC_FT		=	libc_ft/ft_memset.c		\
 				libc_ft/ft_isascii.c	\
 				libc_ft/ft_isprint.c	\
 				libc_ft/ft_toupper.c	\
-				libc_ft/ft_tolower.c	
+				libc_ft/ft_tolower.c
 
 SUPP_FT		=	supp_ft/ft_memalloc.c	\
 				supp_ft/ft_memdel.c		\
@@ -66,45 +56,91 @@ SUPP_FT		=	supp_ft/ft_memalloc.c	\
 				supp_ft/ft_putendl_fd.c	\
 				supp_ft/ft_putnbr_fd.c
 
-BONUS_FT	=	bonus_ft/ft_lstnew.c	\
-				bonus_ft/ft_lstdelone.c	\
-				bonus_ft/ft_lstdel.c	\
-				bonus_ft/ft_lstadd.c	\
-				bonus_ft/ft_lstiter.c	\
-				bonus_ft/ft_lstmap.c
+CUSTOM_FT	=	custom_ft/ft_abs.c		\
+				custom_ft/ft_pow.c		\
+				custom_ft/ft_strndup.c
 
-SRCS		=	$(LIBC_FT)				\
-				$(SUPP_FT)				\
-				$(BONUS_FT)				
+HEADER		=	includes
 
-OBJS		=	$(SRC:%.c=%.o)
+FLAGS		=	-Wall -Wextra -Werror
 
-INC			=	-Iincludes
+OPTION		=	-c -I$(HEADER)
 
-CC      	=	cc
+SRCS		+=	$(LIBC_FT)
+SRCS		+=	$(SUPP_FT)
+SRCS		+=	$(CUSTOM_FT)
 
-CFLAGS  	+=	-c -Wall -Werror -Wextra -Iincludes
+OBJ			=	ft_memset.o		\
+				ft_bzero.o		\
+				ft_memcpy.o		\
+				ft_memccpy.o	\
+				ft_memmove.o	\
+				ft_memchr.o		\
+				ft_memcmp.o		\
+				ft_strlen.o		\
+				ft_strdup.o		\
+				ft_strcpy.o		\
+				ft_strncpy.o	\
+				ft_strcat.o		\
+				ft_strncat.o	\
+				ft_strlcat.o	\
+				ft_strchr.o		\
+				ft_strrchr.o	\
+				ft_strstr.o		\
+				ft_strnstr.o	\
+				ft_strcmp.o		\
+				ft_strncmp.o	\
+				ft_atoi.o		\
+				ft_isalpha.o	\
+				ft_isdigit.o	\
+				ft_isalnum.o	\
+				ft_isascii.o	\
+				ft_isprint.o	\
+				ft_toupper.o	\
+				ft_tolower.o	\
+				ft_memalloc.o	\
+				ft_memdel.o		\
+				ft_strnew.o		\
+				ft_strdel.o		\
+				ft_strclr.o		\
+				ft_striter.o	\
+				ft_striteri.o	\
+				ft_strmap.o		\
+				ft_strmapi.o	\
+				ft_strequ.o		\
+				ft_strnequ.o	\
+				ft_strsub.o		\
+				ft_strjoin.o	\
+				ft_strtrim.o	\
+				ft_strsplit.o	\
+				ft_itoa.o		\
+				ft_putchar.o	\
+				ft_putstr.o		\
+				ft_putendl.o	\
+				ft_putnbr.o		\
+				ft_putchar_fd.o	\
+				ft_putstr_fd.o	\
+				ft_putendl_fd.o	\
+				ft_putnbr_fd.o	\
+				ft_abs.o		\
+				ft_pow.o		\
+				ft_strndup.o
 
-RM			=	rm -f
+all: $(NAME)
 
-all			:
-		@make $(NAME)
+$(NAME):
+	@$(CC) $(FLAGS) $(OPTION) $(SRCS)
+	@ar rcs $(NAME) $(OBJ)
+	@echo "\033[32mlibft is ready\033[0m"
 
-$(NAME)		:	$(OBJS)
-		$(CC) $(SRCS)
-		ar rc $(NAME) $(OBJS)
-		@echo "libft.a created √√"
+clean:
+	@rm -f $(OBJ)
+	@echo "\033[33mall .o files are removed\033[0m"
 
-$(OBJS)		:	$(SRCS)
-		$(CC) $(SRCS)
-		@echo "OBJS created √√"
+fclean: clean
+	@rm -f $(NAME)
+	@echo "\033[31m$(NAME) is deleted\033[0m"
 
-clean		:
-		$(RM) $(OBJS)
-		@echo "OBJS cleared √√"
+re: fclean all
 
-fclean		:	clean
-		$(RM) $(NAME)
-		@echo "libft.a cleared √√"
-
-re		:	fclean all
+.PHONY: all clean fclean re

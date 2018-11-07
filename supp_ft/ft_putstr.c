@@ -6,17 +6,16 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 18:16:57 by rmerien           #+#    #+#             */
-/*   Updated: 2018/09/08 20:57:48 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/09/24 00:51:41 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_putstr(char const *str)
 {
 	if (!str)
 		ft_putstr("(null)");
 	else
-		while (*str)
-			write (1, str++, 1);
+		write (1, &*str, ft_strlen(str));
 }

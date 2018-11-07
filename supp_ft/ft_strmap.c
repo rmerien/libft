@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/23 22:22:35 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/07 11:29:02 by rmerien          ###   ########.fr       */
+/*   Created: 2018/10/07 04:09:29 by rmerien           #+#    #+#             */
+/*   Updated: 2018/11/07 12:11:42 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char	*s2;
+	char		*new_string;
+	size_t		len;
+	int			i;
 
-	if (!(s2 = malloc(sizeof(char) * ft_strlen(s1) + 1)))
+	if (!s)
 		return (NULL);
-	ft_strcpy(s2, s1);
-	return (s2);
+	len = ft_strlen(s);
+	if (!(new_string = (char *)malloc(sizeof(char) * len + 1)))
+		return (NULL);
+	new_string[len] = '\0';
+	i = -1;
+	while (s[++i])
+		new_string[i] = (*f)(s[i]);
+	return (new_string);
 }
