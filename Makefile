@@ -58,7 +58,14 @@ SUPP_FT		=	supp_ft/ft_memalloc.c	\
 
 CUSTOM_FT	=	custom_ft/ft_abs.c		\
 				custom_ft/ft_pow.c		\
-				custom_ft/ft_strndup.c
+				custom_ft/ft_strndup.c	\
+				custom_ft/ft_insort.c	\
+				custom_ft/ft_iswap.c	\
+				custom_ft/ft_swap.c		\
+				custom_ft/ft_strrev.c	\
+				custom_ft/ft_tolower.c	\
+				custom_ft/ft_toupper.c	\
+				custom_ft/ft_ilen.c	
 
 BONUS_FT	=	bonus_ft/ft_lstnew.c	\
 				bonus_ft/ft_lstiter.c	\
@@ -138,7 +145,14 @@ OBJ			=	ft_memset.o		\
 				ft_lstmap.o		\
 				ft_lstadd.o		\
 				ft_lstdelone.o	\
-				ft_lstdel.o
+				ft_lstdel.o		\
+				ft_insort.o		\
+				ft_iswap.o		\
+				ft_swap.o		\
+				ft_strrev.o		\
+				ft_tolower.o	\
+				ft_toupper.o	\
+				ft_ilen.o
 
 all: $(NAME)
 
