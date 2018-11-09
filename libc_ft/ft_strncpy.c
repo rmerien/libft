@@ -6,7 +6,7 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 22:49:13 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/07 11:25:10 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/09 11:50:56 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	char *tdst;
+	char *tmp;
 
-	tdst = dst;
+	tmp = dst;
 	while (len--)
 	{
 		if (*src)
-			*tdst++ = *src++;
+			*tmp++ = *src++;
 		else
-			*tdst++ = '\0';
+			*tmp++ = '\0';
 	}
 	return (dst);
 }

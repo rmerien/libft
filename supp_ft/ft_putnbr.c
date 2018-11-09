@@ -6,7 +6,7 @@
 /*   By: rmerien <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/26 19:46:41 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/07 14:50:26 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/09 11:53:32 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,13 @@ void	ft_putnbr(int n)
 	unsigned int nb;
 
 	nb = 0;
-	(n < 0 ? (nb = -n), ft_putchar('-') : (nb = n));
+	if (n < 0)
+	{
+		ft_putchar('-');
+		nb = -n;
+	}
+	else
+		nb = n;
 	if (nb > 9)
 		ft_putnbr(nb / 10);
 	ft_putchar((nb % 10) + 48);

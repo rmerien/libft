@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/23 22:33:51 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/09 11:50:31 by rmerien          ###   ########.fr       */
+/*   Created: 2018/11/08 19:41:42 by rmerien           #+#    #+#             */
+/*   Updated: 2018/11/09 02:43:38 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+t_list        *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	char *tmp;
+    t_list    *sortie;
 
-	tmp = dst;
-	while (*src)
-		*tmp++ = *src++;
-	*tmp++ = *src;
-	return (dst);
+    if (lst)
+    {
+        sortie = f(lst);
+        sortie->next = ft_lstmap(lst->next, f);
+        return (sortie);
+    }
+    return (NULL);
 }

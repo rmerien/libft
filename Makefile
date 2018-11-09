@@ -60,6 +60,13 @@ CUSTOM_FT	=	custom_ft/ft_abs.c		\
 				custom_ft/ft_pow.c		\
 				custom_ft/ft_strndup.c
 
+BONUS_FT	=	bonus_ft/ft_lstnew.c	\
+				bonus_ft/ft_lstiter.c	\
+				bonus_ft/ft_lstmap.c	\
+				bonus_ft/ft_lstadd.c	\
+				bonus_ft/ft_lstdelone.c	\
+				bonus_ft/ft_lstdel.c
+
 HEADER		=	includes
 
 FLAGS		=	-Wall -Wextra -Werror
@@ -69,6 +76,7 @@ OPTION		=	-c -I$(HEADER)
 SRCS		+=	$(LIBC_FT)
 SRCS		+=	$(SUPP_FT)
 SRCS		+=	$(CUSTOM_FT)
+SRCS		+=	$(BONUS_FT)
 
 OBJ			=	ft_memset.o		\
 				ft_bzero.o		\
@@ -124,7 +132,13 @@ OBJ			=	ft_memset.o		\
 				ft_putnbr_fd.o	\
 				ft_abs.o		\
 				ft_pow.o		\
-				ft_strndup.o
+				ft_strndup.o	\
+				ft_lstnew.o		\
+				ft_lstiter.o	\
+				ft_lstmap.o		\
+				ft_lstadd.o		\
+				ft_lstdelone.o	\
+				ft_lstdel.o
 
 all: $(NAME)
 

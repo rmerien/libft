@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/23 22:33:51 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/09 11:50:31 by rmerien          ###   ########.fr       */
+/*   Created: 2018/11/09 12:05:42 by rmerien           #+#    #+#             */
+/*   Updated: 2018/11/09 12:06:01 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strcpy(char *dst, const char *src)
+int	ft_toupper(int c)
 {
-	char *tmp;
-
-	tmp = dst;
-	while (*src)
-		*tmp++ = *src++;
-	*tmp++ = *src;
-	return (dst);
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }

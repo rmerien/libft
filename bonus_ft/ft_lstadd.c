@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/09/23 22:33:51 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/09 11:50:31 by rmerien          ###   ########.fr       */
+/*   Created: 2018/11/08 17:33:38 by rmerien           #+#    #+#             */
+/*   Updated: 2018/11/08 19:41:27 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+void		ft_lstadd(t_list **alst, t_list *new)
 {
-	char *tmp;
-
-	tmp = dst;
-	while (*src)
-		*tmp++ = *src++;
-	*tmp++ = *src;
-	return (dst);
+	if (!alst || !new)
+		return ;
+	new->next = *alst;
+	*alst = new;
 }
+
