@@ -67,6 +67,7 @@ CUSTOM_FT	=	custom_ft/ft_abs.c		\
 				custom_ft/ft_toupper.c	\
 				custom_ft/ft_isspace.c	\
 				custom_ft/ft_do_op.c	\
+				custom_ft/ft_realloc.c	\
 				custom_ft/ft_ilen.c	
 
 BONUS_FT	=	bonus_ft/ft_lstnew.c	\
@@ -107,6 +108,7 @@ OBJ			=	ft_memset.o		\
 				ft_strnstr.o	\
 				ft_strcmp.o		\
 				ft_strncmp.o	\
+				ft_realloc.o	\
 				ft_atoi.o		\
 				ft_isalpha.o	\
 				ft_isdigit.o	\

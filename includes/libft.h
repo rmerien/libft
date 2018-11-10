@@ -83,6 +83,7 @@ char			*ft_strrev(char *str);
 void			ft_swap(void *a, void *b);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
+void			*ft_realloc(void *ptr, size_t size);
 unsigned int	ft_ilen(int *tab);
 
 #endif
