@@ -6,7 +6,7 @@
 /*   By: rmerien <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 13:49:49 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/10 13:53:00 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/10 17:48:23 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,8 +95,6 @@ void				ft_insort(int *tab, int n);
 void				ft_iswap(int *a, int *b);
 char				*ft_strrev(char *str);
 void				ft_swap(void *a, void *b);
-int					ft_tolower(int c);
-int					ft_toupper(int c);
 void				*ft_realloc(void *ptr, size_t size);
 unsigned int		ft_ilen(int *tab);
 

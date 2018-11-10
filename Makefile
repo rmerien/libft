@@ -2,80 +2,78 @@ CC = gcc
 
 NAME = libft.a
 
-LIBC_FT		=	libc_ft/ft_memset.c		\
-				libc_ft/ft_bzero.c		\
-				libc_ft/ft_memcpy.c		\
-				libc_ft/ft_memccpy.c	\
-				libc_ft/ft_memmove.c	\
-				libc_ft/ft_memchr.c		\
-				libc_ft/ft_memcmp.c		\
-				libc_ft/ft_strlen.c		\
-				libc_ft/ft_strdup.c		\
-				libc_ft/ft_strcpy.c		\
-				libc_ft/ft_strncpy.c	\
-				libc_ft/ft_strcat.c		\
-				libc_ft/ft_strncat.c	\
-				libc_ft/ft_strlcat.c	\
-				libc_ft/ft_strchr.c		\
-				libc_ft/ft_strrchr.c	\
-				libc_ft/ft_strstr.c		\
-				libc_ft/ft_strnstr.c	\
-				libc_ft/ft_strcmp.c		\
-				libc_ft/ft_strncmp.c	\
-				libc_ft/ft_atoi.c		\
-				libc_ft/ft_isalpha.c	\
-				libc_ft/ft_isdigit.c	\
-				libc_ft/ft_isalnum.c	\
-				libc_ft/ft_isascii.c	\
-				libc_ft/ft_isprint.c	\
-				libc_ft/ft_toupper.c	\
-				libc_ft/ft_tolower.c
+LIBC_FT		=	ft_memset.c		\
+				ft_bzero.c		\
+				ft_memcpy.c		\
+				ft_memccpy.c	\
+				ft_memmove.c	\
+				ft_memchr.c		\
+				ft_memcmp.c		\
+				ft_strlen.c		\
+				ft_strdup.c		\
+				ft_strcpy.c		\
+				ft_strncpy.c	\
+				ft_strcat.c		\
+				ft_strncat.c	\
+				ft_strlcat.c	\
+				ft_strchr.c		\
+				ft_strrchr.c	\
+				ft_strstr.c		\
+				ft_strnstr.c	\
+				ft_strcmp.c		\
+				ft_strncmp.c	\
+				ft_atoi.c		\
+				ft_isalpha.c	\
+				ft_isdigit.c	\
+				ft_isalnum.c	\
+				ft_isascii.c	\
+				ft_isprint.c	\
+				ft_toupper.c	\
+				ft_tolower.c
 
-SUPP_FT		=	supp_ft/ft_memalloc.c	\
-				supp_ft/ft_memdel.c		\
-				supp_ft/ft_strnew.c		\
-				supp_ft/ft_strdel.c		\
-				supp_ft/ft_strclr.c		\
-				supp_ft/ft_striter.c	\
-				supp_ft/ft_striteri.c	\
-				supp_ft/ft_strmap.c		\
-				supp_ft/ft_strmapi.c	\
-				supp_ft/ft_strequ.c		\
-				supp_ft/ft_strnequ.c	\
-				supp_ft/ft_strsub.c		\
-				supp_ft/ft_strjoin.c	\
-				supp_ft/ft_strtrim.c	\
-				supp_ft/ft_strsplit.c	\
-				supp_ft/ft_itoa.c		\
-				supp_ft/ft_putchar.c	\
-				supp_ft/ft_putstr.c		\
-				supp_ft/ft_putendl.c	\
-				supp_ft/ft_putnbr.c		\
-				supp_ft/ft_putchar_fd.c	\
-				supp_ft/ft_putstr_fd.c	\
-				supp_ft/ft_putendl_fd.c	\
-				supp_ft/ft_putnbr_fd.c
+SUPP_FT		=	ft_memalloc.c	\
+				ft_memdel.c		\
+				ft_strnew.c		\
+				ft_strdel.c		\
+				ft_strclr.c		\
+				ft_striter.c	\
+				ft_striteri.c	\
+				ft_strmap.c		\
+				ft_strmapi.c	\
+				ft_strequ.c		\
+				ft_strnequ.c	\
+				ft_strsub.c		\
+				ft_strjoin.c	\
+				ft_strtrim.c	\
+				ft_strsplit.c	\
+				ft_itoa.c		\
+				ft_putchar.c	\
+				ft_putstr.c		\
+				ft_putendl.c	\
+				ft_putnbr.c		\
+				ft_putchar_fd.c	\
+				ft_putstr_fd.c	\
+				ft_putendl_fd.c	\
+				ft_putnbr_fd.c
 
-CUSTOM_FT	=	custom_ft/ft_abs.c		\
-				custom_ft/ft_pow.c		\
-				custom_ft/ft_strndup.c	\
-				custom_ft/ft_insort.c	\
-				custom_ft/ft_iswap.c	\
-				custom_ft/ft_swap.c		\
-				custom_ft/ft_strrev.c	\
-				custom_ft/ft_tolower.c	\
-				custom_ft/ft_toupper.c	\
-				custom_ft/ft_isspace.c	\
-				custom_ft/ft_do_op.c	\
-				custom_ft/ft_realloc.c	\
-				custom_ft/ft_ilen.c	
+CUSTOM_FT	=	ft_abs.c		\
+				ft_pow.c		\
+				ft_strndup.c	\
+				ft_insort.c		\
+				ft_iswap.c		\
+				ft_swap.c		\
+				ft_strrev.c		\
+				ft_isspace.c	\
+				ft_do_op.c		\
+				ft_realloc.c	\
+				ft_ilen.c	
 
-BONUS_FT	=	bonus_ft/ft_lstnew.c	\
-				bonus_ft/ft_lstiter.c	\
-				bonus_ft/ft_lstmap.c	\
-				bonus_ft/ft_lstadd.c	\
-				bonus_ft/ft_lstdelone.c	\
-				bonus_ft/ft_lstdel.c
+BONUS_FT	=	ft_lstnew.c		\
+				ft_lstiter.c	\
+				ft_lstmap.c		\
+				ft_lstadd.c		\
+				ft_lstdelone.c	\
+				ft_lstdel.c
 
 HEADER		=	includes
 
@@ -88,81 +86,11 @@ SRCS		+=	$(SUPP_FT)
 SRCS		+=	$(CUSTOM_FT)
 SRCS		+=	$(BONUS_FT)
 
-OBJ			=	ft_memset.o		\
-				ft_bzero.o		\
-				ft_memcpy.o		\
-				ft_memccpy.o	\
-				ft_memmove.o	\
-				ft_memchr.o		\
-				ft_memcmp.o		\
-				ft_strlen.o		\
-				ft_strdup.o		\
-				ft_strcpy.o		\
-				ft_strncpy.o	\
-				ft_strcat.o		\
-				ft_strncat.o	\
-				ft_strlcat.o	\
-				ft_strchr.o		\
-				ft_strrchr.o	\
-				ft_strstr.o		\
-				ft_strnstr.o	\
-				ft_strcmp.o		\
-				ft_strncmp.o	\
-				ft_realloc.o	\
-				ft_atoi.o		\
-				ft_isalpha.o	\
-				ft_isdigit.o	\
-				ft_isalnum.o	\
-				ft_isascii.o	\
-				ft_isprint.o	\
-				ft_toupper.o	\
-				ft_tolower.o	\
-				ft_memalloc.o	\
-				ft_memdel.o		\
-				ft_strnew.o		\
-				ft_strdel.o		\
-				ft_strclr.o		\
-				ft_striter.o	\
-				ft_striteri.o	\
-				ft_strmap.o		\
-				ft_strmapi.o	\
-				ft_strequ.o		\
-				ft_strnequ.o	\
-				ft_strsub.o		\
-				ft_strjoin.o	\
-				ft_strtrim.o	\
-				ft_strsplit.o	\
-				ft_itoa.o		\
-				ft_putchar.o	\
-				ft_putstr.o		\
-				ft_putendl.o	\
-				ft_do_op.o		\
-				ft_putnbr.o		\
-				ft_putchar_fd.o	\
-				ft_putstr_fd.o	\
-				ft_putendl_fd.o	\
-				ft_putnbr_fd.o	\
-				ft_abs.o		\
-				ft_pow.o		\
-				ft_strndup.o	\
-				ft_lstnew.o		\
-				ft_lstiter.o	\
-				ft_lstmap.o		\
-				ft_lstadd.o		\
-				ft_lstdelone.o	\
-				ft_lstdel.o		\
-				ft_insort.o		\
-				ft_iswap.o		\
-				ft_swap.o		\
-				ft_strrev.o		\
-				ft_tolower.o	\
-				ft_isspace.o	\
-				ft_toupper.o	\
-				ft_ilen.o
+OBJ			=	$(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(SRCS)
 	@$(CC) $(FLAGS) $(OPTION) $(SRCS)
 	@ar rcs $(NAME) $(OBJ)
 	@echo "\033[32mlibft is ready\033[0m"
