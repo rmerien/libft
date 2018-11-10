@@ -65,6 +65,8 @@ CUSTOM_FT	=	custom_ft/ft_abs.c		\
 				custom_ft/ft_strrev.c	\
 				custom_ft/ft_tolower.c	\
 				custom_ft/ft_toupper.c	\
+				custom_ft/ft_isspace.c	\
+				custom_ft/ft_do_op.c	\
 				custom_ft/ft_ilen.c	
 
 BONUS_FT	=	bonus_ft/ft_lstnew.c	\
@@ -132,6 +134,7 @@ OBJ			=	ft_memset.o		\
 				ft_putchar.o	\
 				ft_putstr.o		\
 				ft_putendl.o	\
+				ft_do_op.o		\
 				ft_putnbr.o		\
 				ft_putchar_fd.o	\
 				ft_putstr_fd.o	\
@@ -151,6 +154,7 @@ OBJ			=	ft_memset.o		\
 				ft_swap.o		\
 				ft_strrev.o		\
 				ft_tolower.o	\
+				ft_isspace.o	\
 				ft_toupper.o	\
 				ft_ilen.o
 
