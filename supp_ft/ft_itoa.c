@@ -6,13 +6,11 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 01:03:35 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/07 15:59:52 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/10 13:50:46 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-
 
 static int		ft_len_str(int nb)
 {
@@ -27,7 +25,7 @@ static int		ft_len_str(int nb)
 	return (len);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	int			len;
 	int			sign;

@@ -6,7 +6,7 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/23 22:06:49 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/07 11:20:25 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/10 13:37:48 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	if (s[i] == (char)c)
-		return((char *)s + i);
+		return ((char *)s + i);
 	return (NULL);
 }

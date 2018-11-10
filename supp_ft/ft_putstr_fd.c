@@ -6,7 +6,7 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/07 04:39:48 by rmerien           #+#    #+#             */
-/*   Updated: 2018/10/07 04:41:43 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/10 13:46:43 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ void	ft_putstr_fd(char const *s, int fd)
 	if (!s)
 		ft_putstr_fd("(null)", fd);
 	else
-		write (fd, &*s, ft_strlen(s));
+		write(fd, &*s, ft_strlen(s));
 }

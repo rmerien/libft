@@ -6,7 +6,7 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 17:25:57 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/09 03:11:23 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/10 13:46:12 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,3 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	}
 	*alst = 0;
 }
-
-

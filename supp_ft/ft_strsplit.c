@@ -6,7 +6,7 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:00:03 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/07 18:04:43 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/10 13:47:20 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char			**ft_strsplit(char const *s, char c)
 		return (NULL);
 	while (nb_word--)
 	{
-		while (*s == c && *s) 
+		while (*s == c && *s)
 			s++;
 		if (!(tab[i] = ft_strsub(s, 0, ft_len_w(s, c))))
 			return (NULL);

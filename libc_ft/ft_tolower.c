@@ -6,11 +6,11 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/09 20:05:42 by rmerien           #+#    #+#             */
-/*   Updated: 2018/09/23 17:39:48 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/10 13:42:52 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_tolower(int	c)
+int		ft_tolower(int c)
 {
 	return ((64 < c && c < 91) ? (int)(c + 32) : c);
 }

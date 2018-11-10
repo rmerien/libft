@@ -6,7 +6,7 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 17:33:38 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/08 19:41:27 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/10 13:45:51 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,3 @@ void		ft_lstadd(t_list **alst, t_list *new)
 	new->next = *alst;
 	*alst = new;
 }
-
