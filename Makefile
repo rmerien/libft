@@ -75,7 +75,7 @@ BONUS_FT	=	ft_lstnew.c		\
 				ft_lstdelone.c	\
 				ft_lstdel.c
 
-HEADER		=	includes
+HEADER		=	.
 
 FLAGS		=	-Wall -Wextra -Werror
 

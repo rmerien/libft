@@ -6,7 +6,7 @@
 /*   By: rmerien <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 13:49:49 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/10 17:48:23 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/11 21:46:57 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,6 @@ char				*ft_strrev(char *str);
 void				ft_swap(void *a, void *b);
 void				*ft_realloc(void *ptr, size_t size);
 unsigned int		ft_ilen(int *tab);
+int					ft_isspace(int c);
 
 #endif
