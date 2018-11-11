@@ -6,7 +6,7 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/24 14:27:01 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/09 19:27:27 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/10 18:29:34 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[len_dst + i] = src[i];
 		i++;
 	}
-	dst[len_dst + i] = '\0';
+	if (len_dst + i < dstsize)
+		dst[len_dst + i] = '\0';
 	return (len_dst + len_src);
 }
