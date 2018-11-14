@@ -6,11 +6,13 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 02:23:09 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/10 02:24:06 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/11 22:01:57 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int		ft_isspace(int c)
 {
-	return (c == '\t' || c == '\n' || c == '\v' || c == '\r' || c == ' ');
+	return ((8 < c && c < 14) || c == 32);
 }
