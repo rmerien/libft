@@ -6,7 +6,7 @@
 /*   By: rmerien <rmerien@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 00:16:19 by rmerien           #+#    #+#             */
-/*   Updated: 2018/11/07 12:31:39 by rmerien          ###   ########.fr       */
+/*   Updated: 2018/11/14 06:50:20 by rmerien          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	if (!s)
-		return (NULL);
+		return (0);
 	if (!(new_string = (char *)malloc(sizeof(char) * (len + 1))))
-		return (NULL);
+		return (0);
 	new_string[len] = '\0';
 	while (len-- && s[start])
 		new_string[i++] = s[start++];
